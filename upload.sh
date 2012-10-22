@@ -2,12 +2,10 @@
 
 set -e
 
-# change these as necessary
-ACTIVITIES="/Volumes/GARMIN/Garmin/Activities"
-FROM="latchkey@gmail.com"
-
 SETTINGS="$HOME/.strava-auto-upload"
 TO="upload@strava.com"
+
+source "$SETTINGS/config"
 
 log() {
 	DATE=`date +"%D %T: "`
