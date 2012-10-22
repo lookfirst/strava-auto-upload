@@ -15,10 +15,12 @@ config
 ------
 
 1. ```git clone``` this repo
-1. execute mountain lion (10.8) commands below if you are running this version
-1. edit ```upload.sh``` and change the two variables at the top as necessary
-1. edit ```strava.plist``` and specify the absolute path to the ```upload.sh``` script
+1. if you are running mountain lion (10.8), execute the commands below
+1. ```mkdir ~/.strava-auto-upload```
+1. ```echo ACTIVITIES=\"/Volumes/GARMIN/Garmin/Activities\" >> ~/.strava-auto-upload/config```
+1. ```echo FROM=\"YOUR_EMAIL_ADDRESS@DOMAIN.COM\" >> ~/.strava-auto-upload/config```
 1. copy ```strava.plist``` to ```~/Library/LaunchAgents/strava.plist```
+1. edit ```strava.plist``` and specify the absolute path to the ```upload.sh``` script and the location of your Activities folder
 1. execute ```launchctrl load ~/Libarary/LaunchAgents/strava.plist```
 
 removal
