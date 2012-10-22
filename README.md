@@ -29,7 +29,7 @@ removal
 
 debug
 -----
-1. the ```$HOME/.strava-auto-upload``` folder contains the last file uploaded and a log of everything
+1. ```$HOME/.strava-auto-upload``` contains the last file uploaded and a log of everything
 
 osx mountain lion (10.8)
 ------------------------
