@@ -1,15 +1,15 @@
 strava-auto-upload
 ==================
 
-Plug your device in and it'll email your latest .fit files to upload@strava.com
+plug your device in and it'll email your latest .fit files to upload@strava.com
 
-Pull requests welcome. Questions? latchkey@gmail.com
+pull requests welcome. questions? latchkey@gmail.com
 
 cavaets
 -------
 
 1. OS X only
-1. Assumes that you can send email from your desktop
+1. assumes that you can send email from your desktop
 
 config
 ------
@@ -25,10 +25,14 @@ removal
 -------
 1. execute ```launchctrl unload ~/Libarary/LaunchAgents/strava.plist```
 
+debug
+-----
+1. the ```$HOME/.strava-auto-upload``` folder contains the last file uploaded and a log of everything
+
 osx mountain lion (10.8)
 ------------------------
 
-There is a bug with postfix configuration with Mountain Lion that [causes an error](http://blog.deversus.com/2012/07/fix-for-postfix-in-mac-os-x-10-8-mountain-lion/). This fixed it for me:
+there is a bug with postfix configuration with Mountain Lion that [causes an error](http://blog.deversus.com/2012/07/fix-for-postfix-in-mac-os-x-10-8-mountain-lion/). This fixed it for me:
 
 ```
 sudo mkdir -p /Library/Server/Mail/Data/spool
