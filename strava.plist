@@ -10,7 +10,7 @@
         </array>
         <key>StartOnMount</key>
         <true/>
-        <key>WatchPaths</key>
+        <key>QueueDirectories</key>
         <array>
             <string>/Volumes/GARMIN/Garmin/Activities/</string>
         </array>
