@@ -48,3 +48,8 @@ future
 1. simple installer
 1. other platforms?
 1. strava is working on an upload api and deprecating the email interface
+
+alternatives
+------------
+
+* [automator action](http://irionman.blogspot.com/2012/10/stravas-little-helper-use-apples.html)
