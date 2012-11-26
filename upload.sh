@@ -46,7 +46,7 @@ else
 		log "Emailing: $i"
 		HEAD="MIME-Version: 1.0\nFrom: $FROM\nTo: $TO\nContent-Type: multipart/mixed; boundary=STRAVA\n\n--STRAVA\nContent-Type: application/octet-stream; name=\"$i\"\n"
 		HEAD2="Content-Disposition: attachment; filename=\"$i\"\nContent-Transfer-Encoding: base64\n\n"
-		DATA=`base64 -b 75 $i`
+		DATA=`base64 $i`
 		printf "%b%b%s" "$HEAD" "$HEAD2" "$DATA" | sendmail -t
 	done
 
