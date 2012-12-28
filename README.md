@@ -19,6 +19,7 @@ config
 1. ```mkdir ~/.strava-auto-upload```
 1. ```echo ACTIVITIES=\"/Volumes/GARMIN/Garmin/Activities\" >> ~/.strava-auto-upload/config```
 1. ```echo FROM=\"YOUR_EMAIL_ADDRESS@DOMAIN.COM\" >> ~/.strava-auto-upload/config```
+1. ```echo SUFFIX=\"*.fit\" >> ~/.strava-auto-upload/config```
 1. copy ```strava.plist``` to ```~/Library/LaunchAgents/strava.plist```
 1. edit ```strava.plist``` and specify the absolute path to the ```upload.sh``` script and the location of your Activities folder
 1. ```launchctl load ~/Libarary/LaunchAgents/strava.plist```

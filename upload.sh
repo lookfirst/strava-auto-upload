@@ -6,7 +6,6 @@ SETTINGS="$HOME/.strava-auto-upload"
 TO="upload@strava.com"
 
 source "$SETTINGS/config"
-
 log() {
 	DATE=`date +"%D %T: "`
 	echo $DATE $1
@@ -18,7 +17,6 @@ if [ ! -d "$SETTINGS" ]; then
 fi
 
 log "Started upload.sh script..."
-
 if [ ! -d "$ACTIVITIES" ]; then
 	log "Could not find your garmin folder: $ACTIVITIES"
 	exit
@@ -32,9 +30,9 @@ fi
 cd $ACTIVITIES
 
 if [ ! -z "$LAST_FILE" ]; then
-	FOUND=`find . -name "*.fit" -mnewer $LAST_FILE`
+	FOUND=`find . -name "$SUFFIX" -mnewer $LAST_FILE`
 else
-	FOUND=`find . -name "*.fit"`
+	FOUND=`find . -name "$SUFFIX"`
 fi
 
 if [ -z "$FOUND" ]; then
@@ -55,5 +53,9 @@ else
 		echo -n $i > "$SETTINGS/last_file"
 	fi
 fi
+
+cd 
+log "Attempting to eject the Garmin device"
+diskutil unmount /Volumes/GARMIN/
 
 log "Finished upload.sh script."
