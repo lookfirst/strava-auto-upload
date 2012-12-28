@@ -2,10 +2,12 @@
 
 set -e
 
+SUFFIX=".fit"
 SETTINGS="$HOME/.strava-auto-upload"
 TO="upload@strava.com"
 
 source "$SETTINGS/config"
+
 log() {
 	DATE=`date +"%D %T: "`
 	echo $DATE $1
