@@ -43,6 +43,11 @@ sudo /usr/sbin/postfix set-permissions
 sudo /usr/sbin/postfix start
 ```
 
+spotlight
+---------
+
+follow [these directions](http://apple.stackexchange.com/a/7135) for turning off spotlight indexing.
+
 future
 ------
 
