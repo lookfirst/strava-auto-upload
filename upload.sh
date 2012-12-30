@@ -2,7 +2,7 @@
 
 set -e
 
-SUFFIX=".fit"
+SUFFIX="*.fit"
 SETTINGS="$HOME/.strava-auto-upload"
 TO="upload@strava.com"
 
@@ -56,8 +56,7 @@ else
 	fi
 fi
 
-cd 
-log "Attempting to eject the Garmin device"
-diskutil unmount /Volumes/GARMIN/
+#log "Attempting to eject the Garmin device"
+#diskutil unmount /Volumes/GARMIN/
 
 log "Finished upload.sh script."
