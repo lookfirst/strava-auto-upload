@@ -43,6 +43,11 @@ sudo /usr/sbin/postfix set-permissions
 sudo /usr/sbin/postfix start
 ```
 
+email
+------
+
+if you can't send email from your desktop (in case port 25 is blocked on your network), [setup postfix to send email through your gmail account](https://www.google.com/search?q=send+email+from+command+line+using+gmail+account).
+
 spotlight
 ---------
 
